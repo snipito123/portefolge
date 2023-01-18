@@ -3,7 +3,7 @@ function juhu() {
 }
 juhu();
 
-let a_antall = 48;
+let a_antall = 52;
 let b_antall = 52;
 while (a_antall > 0 && b_antall > 0) {
     if (Math.random() < 0.5) {
