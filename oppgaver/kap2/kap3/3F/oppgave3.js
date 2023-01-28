@@ -9,4 +9,19 @@ let personer = [
     reggisør: Phil Alden Robinson },
     { navn: "cars 1, 2, 3, 4", 
     reggisør: John Lasseter }, 
+    { navn: "gayniggas from outer space", 
+    reggisør: Master Fatman },
+    { navn: "the tree of life", 
+    reggisør: Terrance Mallik },
+    { navn: "openheimer", 
+    reggisør: Christopher Nolan },
+    { navn: "Relentless", 
+    reggisør: Phil Alden Robinson },
+    { navn: "Planes", 
+    reggisør: John Lasseter },
   ];
+
+  for (let egenskap in land) {
+    console.log(filmer.navn);
+    console.log(filmer.reggisør);
+  }
