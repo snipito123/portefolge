@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .oddetall {
+      background-color: #ffcc00;
+    }
+    .partall {
+      background-color: #66ccff;
+    }
+  </style>
+</head>
+<body>
+
+  <ul id="min-liste"></ul>
+
+  <script>
+    var listeElement = document.getElementById("min-liste");
+
+    var li1 = document.createElement("li");
+    li1.appendChild(document.createTextNode("Listepunkt 1"));
+    var li2 = document.createElement("li");
+    li2.appendChild(document.createTextNode("Listepunkt 2"));
+    var li3 = document.createElement("li");
+    li3.appendChild(document.createTextNode("Listepunkt 3"));
+    var li4 = document.createElement("li");
+    li4.appendChild(document.createTextNode("Listepunkt 4"));
+
+    li1.classList.add("oddetall");
+    li2.classList.add("partall");
+    li3.classList.add("oddetall");
+    li4.classList.add("partall");
+    
+    listeElement.appendChild(li1);
+    listeElement.appendChild(li2);
+    listeElement.appendChild(li3);
+    listeElement.appendChild(li4);
+  </script>
+
+</body>
+</html>
