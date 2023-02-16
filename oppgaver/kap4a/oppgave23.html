@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .oddetall {
+      background-color: #ffcc00;
+    }
+    .partall {
+      background-color: #66ccff;
+    }
+  </style>
+</head>
+<body>
+
+  <ul id="min-liste"></ul>
+
+  <script>
+    
+    const listeElement = document.getElementById("min-liste");
+
+    for (let i = 1; i <= 12; i++) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode("Listepunkt " + i));
+
+      if (i % 2 === 1) {
+        li.classList.add("oddetall");
+      } else {
+        li.classList.add("partall");
+      }
+
+      listeElement.appendChild(li);
+    }
+  </script>
+
+</body>
+</html>
