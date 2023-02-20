@@ -16,9 +16,9 @@ let personer = [
     { navn: "openheimer", 
     reggisør: Christopher Nolan },
     { navn: "Relentless", 
-    reggisør: Phil Alden Robinson },
+    reggisør: Phil Alden Robinson };
     { navn: "Planes", 
-    reggisør: John Lasseter },
+    reggisør: John Lasseter };
   ];
 
   for (let egenskap in land) {
