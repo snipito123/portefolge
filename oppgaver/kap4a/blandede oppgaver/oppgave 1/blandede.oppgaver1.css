@@ -1,0 +1,41 @@
+#container {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100vh;
+}
+
+#red {
+	background-color: red;
+	flex-basis: 100%;
+	height: 16.67%;
+}
+
+#orange {
+	background-color: orange;
+	flex-basis: 100%;
+	height: 16.67%;
+}
+
+#yellow {
+	background-color: yellow;
+	flex-basis: 100%;
+	height: 16.67%;
+}
+
+#green {
+	background-color: green;
+	flex-basis: 100%;
+	height: 16.67%;
+}
+
+#blue {
+	background-color: blue;
+	flex-basis: 100%;
+	height: 16.67%;
+}
+
+#purple {
+	background-color: purple;
+	flex-basis: 100%;
+	height: 16.67%;
+}
