@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nettbutikk</title>
+</head>
+<body>
+	<h1>Nettbutikk</h1>
+	<p>Velkommen til vår nettbutikk! Vi har følgende produkter til salgs:</p>
+	
+	<ul>
+		<li>
+			<h2>Produkt 1</h2>
+			<p>Beskrivelse av produkt 1.</p>
+			<p>Pris: 100 kr</p>
+			<button onclick="addProductToCart('Produkt 1', 100)">Kjøp</button>
+		</li>
+		<li>
+			<h2>Produkt 2</h2>
+			<p>Beskrivelse av produkt 2.</p>
+			<p>Pris: 200 kr</p>
+			<button onclick="addProductToCart('Produkt 2', 200)">Kjøp</button>
+		</li>
+		<li>
+			<h2>Produkt 3</h2>
+			<p>Beskrivelse av produkt 3.</p>
+			<p>Pris: 300 kr</p>
+			<button onclick="addProductToCart('Produkt 3', 300)">Kjøp</button>
+		</li>
+		<li>
+			<h2>Produkt 4</h2>
+			<p>Beskrivelse av produkt 4.</p>
+			<p>Pris: 400 kr</p>
+			<button onclick="addProductToCart('Produkt 4', 400)">Kjøp</button>
+		</li>
+		<li>
+			<h2>Produkt 5</h2>
+			<p>Beskrivelse av produkt 5.</p>
+			<p>Pris: 500 kr</p>
+			<button onclick="addProductToCart('Produkt 5', 500)">Kjøp</button>
+		</li>
+	</ul>
+
+	<h2>Handlekurv</h2>
+	<p>Antall varer: <span id="cartCount">0</span></p>
+	<p>Totalpris: <span id="cartTotal">0</span> kr</p>
+	<button onclick="clearCart()">Tøm handlekurv</button>
+	
+	<script>
+		// Funksjon for å legge til produkt i handlekurv
+		function addProductToCart(name, price) {
+			// Hent eksisterende handlekurv fra informasjonskapsel
+			var cart = JSON.parse(getCookie("cart")) || {};
+			
+			// Legg til produkt i handlekurv
+			if (cart[name]) {
+				cart[name].count++;
+			} else {
+				cart[name] = {count: 1, price: price};
+			}
+			
+			// Lagre oppdatert handlekurv i informasjonskapsel
+			setCookie("cart", JSON.stringify(cart), 7);
+			
+			// Oppdater handlekurvvisning
+			updateCartView();
+		}
+		
+		// Funksjon for å tømme handlekurv
+		function clearCart() 
+			// Tøm handlekurv i informasjonskapsel
