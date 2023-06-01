@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<body>
+	<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    <script type="module">
+
+   // Your web app's Firebase configuration
+    const firebaseConfig = {
+  apiKey: "AIzaSyBudczeenz8O2uYsSN4CWfnQQAuPyjdKlM",
+  authDomain: "huskeliste-6aa27.firebaseapp.com",
+  projectId: "huskeliste-6aa27",
+  storageBucket: "huskeliste-6aa27.appspot.com",
+  messagingSenderId: "135581699785",
+  appId: "1:135581699785:web:8b1230170060c202178718"
+};
+  
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // Lager en referanse til databasen
+let db = firebase.firestore();
+// Henter data. Når dataene er ferdig hentet, starter "then"-biten
+db.collection("huskeliste").get().then((snapshot) => {
+    // Henter ut dokumentene
+    let dokumenter = snapshot.docs;
+  
+    // Skriver dokumentene til konsollen
+    console.log(dokumenter);
+  });
+
+  </script>
+</body>
+</html>
